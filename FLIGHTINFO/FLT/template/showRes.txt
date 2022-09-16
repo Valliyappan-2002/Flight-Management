@@ -1,0 +1,28 @@
+
+
+{% extends 'base.txt' %}
+
+{% block content %}
+
+      <p>Flight entry with given number</p>
+      <table border = 2 align = "center">
+        <tr>
+            <th>Flight Number</th>
+            <th>Destination</th>
+            <th>Distance</th>
+            <th>Fuel Quantity</th>
+       </tr>
+
+    {% for flight in flights %}
+      <tr>
+           <td>{{ flight.flight_num }}</td>
+           <td>{{ flight.dest }}</td>
+           <td>{{ flight.dist }}</td> 
+           <td>{{ flight.quant }}</td>
+      </tr>
+    {% endfor %}
+     </table> 
+
+{% endblock %}      
+ 
+        

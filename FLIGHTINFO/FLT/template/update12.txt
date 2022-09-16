@@ -1,0 +1,22 @@
+
+
+
+
+{% extends 'base.txt' %}
+
+{% block content %}
+
+    <p>Update for flight with number {{ flight_num }}</p>   <br>
+
+    <form action = "storeUpdate/{{ flight_num }}"  method = "post">
+       {% csrf_token %}
+
+       <table align = "center">
+          {{ form.as_table }}
+       </table>
+    
+   
+      <input type = 'submit'  value = 'Update it'>
+    </form>    
+          
+{% endblock %}
